@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LEVELS CLUB POKHARA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding-top: 100px; 
+    }
+
+    .Levels-image {
+      width: 100%;
+      height: 800px;
+      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+    header {
+    background-color: transparent;
+    position: fixed !important; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+    .contact-description {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .contact-description p {
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+
+
+  <video autoplay loop muted playsinline class="background-video w-full absolute top-0 left-0 -z-10">
+    <source src="gallery/1.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+
+  <header class="fixed top-0 left-0 w-full z-50 text-white">
+    <div class="container mx-auto flex justify-between items-center px-4 py-3">
+      <div class="flex items-center">
+        <img src="gallery/logo.png" alt="Levels Club Pokhara Logo" class="h-12 mr-4" />
+        <h1 class="text-2xl font-bold hover:text-orange-500 upppercase font-bold">
+          <a href="index.html">LEVELS CLUB POKHARA</a>
+        </h1>
+      </div>
+      <nav class="flex justify-center space-x-8 text-lg font-bold mb-8">
+        <a href="index.html" class="hover:text-orange-500 text-2xl font-bold uppercase text-white">Home</a>
+        <a href="about.html" class="hover:text-orange-500 text-2xl font-bold uppercase text-white">About</a>
+        <a href="event.html" class="hover:text-orange-500 text-2xl font-bold uppercase text-white">Event</a>
+        <a href="reels.html" class="hover:text-orange-500 text-2xl font-bold uppercase text-white">Reels</a>
+        <a href="faq.html" class="hover:text-orange-500 text-2xl font-bold uppercase text-white">FAQs</a>
+        <a href="contact.html" class="hover:text-orange-500 text-2xl font-bold uppercase text-white">Contact</a>
+    </nav>
+      <div class="relative">
+        <button id="dashboardButton" class="text-white text-2xl focus:outline-none">
+          <i class="bi bi-list" style="color: white; font-weight: bold; font-size: 30px;"></i>
+        </button>
+        <div id="dashboardMenu" class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
+          <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+            <i class="fas fa-home"></i> Home
+          </a>
+          <a href="menu.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+            <i class="fas fa-bars"></i> Menu
+          </a>
+          <a href="book.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+            <i class="fas fa-calendar-check"></i> Book your table
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+ 
+  <div class="contact-container">
+    <img src="gallery/events2.jpg" alt="Levels Club" class="Levels-image text-align-center" />
+    <div class="contact-description text-white text-lg bg-gray-500">
+      <p>
+        Whether you’re planning a night out, looking to reserve a VIP table, or just want to know what’s happening this weekend — we’d love to hear from you!
+      </p>
+      <p>
+        So, if you'd like to chat with a real person and get the quickest response please use the provided email or contact number.
+      </p>
+
+      <div class="mt-8">
+        <h3 class="text-xl  font-bold mb-2">Contact Number</h3>
+        <p class="text-lg flex justify-center">
+          <a href="tel:9826105262" class="flex items-center hover:text-orange-500">
+            <i class="fas fa-phone-alt  mr-2"></i> 9826105262
+          </a>
+        </p>
+      </div>
+
+      <div class="mt-6">
+        <h3 class="text-xl font-bold mb-2">Email Us</h3>
+        <p class="text-lg flex justify-center">
+          <a href="mailto:info@levelsclubpokhara.com" class="flex items-center hover:text-orange-500">
+            <i class="fas fa-envelope  mr-2"></i> info@levelsclubpokhara.com
+          </a>
+        </p>
+      </div>
+
+      <p class="mt-6">
+        Please read the terms and conditions properly. If you have any doubt, you can check the FAQs section and still any other doubt please feel free to contact us.
+      </p>
+    </div>
+  </div>
+
+  <!-- Location Section -->
+  <section id="location" class="mt-12 flex flex-col items-center text-center">
+    <h2 class="text-2xl text-white font-bold mb-4">Our Location</h2>
+    <p class="text-white">Find us at Pokhara, Lakeside-Center Point</p>
+    <div class="mt-4 w-full max-w-6xl">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3515.8230748275273!2d83.95436257548549!3d28.21268747589672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995956c588a2529%3A0x7d568fe381b302f0!2sLevels%20Club%20Pokhara!5e0!3m2!1sen!2snp!4v1744102272601!5m2!1sen!2snp" 
+        width="100%" 
+        height="500" 
+        class="rounded shadow-lg"
+        style="border:0;" 
+        allowfullscreen 
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black bg-opacity-70 mt-12 text-white py-6">
+    <div class="container mx-auto px-4 text-center text-lg">
+      <p class="mb-2">&copy; 2025 Levels Club Pokhara. All Rights Reserved.</p>
+      <p>
+        <a href="rules.html" class="hover:text-orange-500">Rules and Regulations</a> |
+        <a href="terms.html" class="hover:text-orange-500">Terms & Conditions</a> |
+        <a href="privacy.html" class="hover:text-orange-500">Privacy Policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Dashboard Script -->
+  <script>
+    const dashboardButton = document.getElementById('dashboardButton');
+    const dashboardMenu = document.getElementById('dashboardMenu');
+
+    dashboardButton.addEventListener('click', () => {
+      dashboardMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!dashboardButton.contains(event.target) && !dashboardMenu.contains(event.target)) {
+        dashboardMenu.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

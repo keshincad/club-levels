@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVELS CLUB POKHARA - About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/akira-expanded" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: #18181b;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100vw;
+            min-height: 100vh;
+            z-index: -1;
+            object-fit: cover;
+            opacity: 0.15;
+        }
+        #mainHeader {
+            transition: top 0.3s;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(24,24,27,0.95);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+        }
+        #mainHeader.header-hidden {
+            top: -120px;
+        }
+        .chatbox {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            background: #ff7300;
+            color: #fff;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+            cursor: pointer;
+            z-index: 1100;
+            transition: background 0.2s;
+        }
+        .chatbox:hover {
+            background: #ff9800;
+        }
+        .social-icons {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            right: 40px;
+            flex-direction: column;
+            gap: 16px;
+            z-index: 1101;
+        }
+        .social-icons a {
+            color: #fff;
+            background: #222;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .social-icons a:hover {
+            background: #ff7300;
+            color: #fff;
+        }
+        @media (max-width: 900px) {
+            .about-flex {
+                flex-direction: column;
+                align-items: center;
+            }
+            .about-img {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted playsinline class="background-video">
+        <source src="gallery/1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <header id="mainHeader">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="gallery/logo.png" alt="Levels Club Pokhara Logo" class="h-12 mr-4">
+                <h1 class="text-2xl font-bold drop-shadow" style="font-family: 'Akira Expanded', sans-serif;">
+                    <a href="index.html">LEVELS CLUB POKHARA</a>
+                </h1>
+            </div>
+            <nav class="flex justify-center space-x-8 text-lg font-bold mb-0">
+                <a href="index.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow">Home</a>
+                <a href="faq.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow">FAQs</a>
+                <a href="contact.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow">Contact</a>
+            </nav>
+            <div class="relative">
+                <button id="dashboardButton" class="text-orange text-2xl focus:outline-none">
+                    <i class="bi bi-list" style="color: white; font-weight: bold; font-size: 30px;"></i>
+                </button>
+                <div id="dashboardMenu" class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
+                    <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a href="menu.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                        <i class="fas fa-bars"></i> Menu
+                    </a>
+                    <a href="book.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                        <i class="fas fa-calendar-check"></i> Book your table
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main style="margin-top: 6rem;">
+      
+                    <img src="gallery/home.jpg" alt="Levels Club" class="rounded-lg shadow-lg w-full h-auto object-cover about-img">
+                </div>
+                <div class="w-full md:w-1/2 mt-8 md:mt-0 md:ml-8 text-left">
+                    <h2 class="text-6xl font-bold uppercase tracking-wide text-center text-white drop-shadow" style="font-family: 'Akira Expanded', sans-serif;">About Levels Club</h2>
+                    <h3 class="text-4xl font-extrabold mt-4 drop-shadow text-center">Where Pokhara Parties</h3>
+                    <p class="text-2xl mt-4 leading-relaxed drop-shadow text-center align-items: center justify-center">
+                        Levels Club in Pokhara is one of the city's top nightlife spots, renowned for its energetic vibe, modern ambiance, and top-notch music. Located in the heart of the Lakeside area, this nightclub attracts both locals and tourists looking to dance the night away. With live DJ performances, themed parties, and a stylish bar offering a wide variety of drinks, Levels Club provides an unforgettable experience for everyone who walks through its doors.
+                        <br><br>
+                        The club boasts a state-of-the-art sound and lighting system, creating an immersive environment that keeps the energy high all night long. Whether you're celebrating a special occasion, enjoying a night out with friends, or simply looking to unwind after a busy day, Levels Club offers the perfect setting. The spacious dance floor, comfortable seating areas, and attentive staff ensure that every guest feels welcome and well taken care of.
+                        <br><br>
+                        In addition to its regular events, Levels Club frequently hosts special guest DJs, live performances, and exclusive parties, making each visit unique. The club's commitment to quality entertainment and customer satisfaction has earned it a reputation as a must-visit destination in Pokhara's vibrant nightlife scene. Come experience the excitement, music, and unforgettable memories that await you at Levels Club – where Pokhara parties!
+                    </p>
+                </div>
+            </div>
+    </main>
+    <div class="chatbox" onclick="toggleIcons()">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+    <div class="social-icons" id="socialIcons">
+        <a href="https://wa.me/9802853733" class="whatsapp" target="_blank" title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://m.me/yourpageusername" class="messenger" target="_blank" title="Chat on Messenger">
+            <i class="fab fa-facebook-messenger"></i>
+        </a>
+    </div>
+    <footer class="text-white py-8 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <nav class="flex justify-center space-x-8 text-lg font-bold mb-8">
+                <a href="index.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow">Home</a>
+                <a href="about.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow">About</a>
+                <a href="event.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow">Event</a>
+                <a href="faq.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow">FAQs</a>
+                <a href="contact.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow">Contact</a>
+            </nav>
+            <img src="gallery/logo.png" alt="Club Logo" class="h-16 mx-auto mb-4">
+            <h3 class="font-bold text-xl mb-2">Levels Club</h3>
+            <p class="flex items-center justify-center mb-2">
+                <i class="fas fa-map-marker-alt text-orange-500 mr-2"></i>
+                <a href="https://maps.app.goo.gl/rhhoynFXe3spq2J56" target="_blank" class="hover:text-orange-500">
+                    Centre Point, Lakeside, Pokhara
+                </a>
+            </p>
+            <p class="mb-2">
+                <i class="fas fa-phone-alt text-orange-500 mr-2"></i>
+                <a href="tel:9802853733" class="hover:text-orange-500">9802853733</a>
+            </p>
+            <p class="mb-2">
+                <i class="fas fa-envelope text-orange-500 mr-2"></i>
+                <a href="mailto:levelsclubpokhara@gmail.com" class="hover:text-orange-500">levelsclubpokhara@gmail.com</a>
+            </p>
+            <p class="mb-2">
+                <i class="fas fa-clock text-orange-500 mr-2"></i> 08 PM - 05 AM (Everyday)
+            </p>
+            <div class="flex justify-center space-x-6 mt-6">
+                <a href="https://www.facebook.com/profile.php?id=61567808766807" class="text-white hover:text-orange-500">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/levelsclubpokhara/" class="text-white hover:text-orange-500">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@levelsclub_pokhara" class="text-white hover:text-orange-500">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            <div class="mt-8 text-center text-2xl">
+                <p>&copy; 2025 Levels Club Pokhara. All Rights Reserved.
+                    <a href="rules.html" class="hover:text-orange-500">Rules and Regulations</a> |
+                    <a href="terms.html" class="hover:text-orange-500">Terms & Conditions</a> |
+                    <a href="privacy.html" class="hover:text-orange-500">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Header hide/show on scroll
+        let lastScrollY = window.scrollY;
+        const header = document.getElementById('mainHeader');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY === 0) {
+                header.classList.remove('header-hidden');
+            } else if (window.scrollY > lastScrollY) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+
+        // Dashboard menu toggle
+        const dashboardButton = document.getElementById('dashboardButton');
+        const dashboardMenu = document.getElementById('dashboardMenu');
+        dashboardButton.addEventListener('click', () => {
+            dashboardMenu.classList.toggle('hidden');
+        });
+        document.addEventListener('click', (event) => {
+            if (!dashboardButton.contains(event.target) && !dashboardMenu.contains(event.target)) {
+                dashboardMenu.classList.add('hidden');
+            }
+        });
+
+        // Chatbox social icons toggle
+        function toggleIcons() {
+            const icons = document.getElementById("socialIcons");
+            icons.style.display = icons.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
+</body>
+</html>

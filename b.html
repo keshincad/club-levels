@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial scale="1.0">
+        <title>Book</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    </head>
+    <body>
+        <header class="bg-black text-white py-4 fixed top-0 w-full z-50">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="gallery/logo.png" alt="Levels Club Pokhara Logo" class="h-12 mr-4">
+                    <h1 class="text-3xl font-bold"><a href="index.html">LEVELS CLUB POKHARA</a></h1>
+                </div>
+                <div class="container mx-auto px-4 text-center">
+                    <nav class="flex justify-center space-x-8 text-lg font-bold mb-8">
+                        <a href="index.html" class="hover:text-orange-500">Home</a>
+                        <a href="about.html" class="hover:text-orange-500">About</a>
+                        <a href="event.html" class="hover:text-orange-500">Event</a>
+                        <a href="reels.html" class="hover:text-orange-500">Reels</a>
+                        <a href="faq.html" class="hover:text-orange-500">FAQs</a>
+                        <a href="contact.html" class="hover:text-orange-500">Contact</a>
+                    </nav>
+                </div>
+                <div class="relative">
+                    <button id="dashboardButton" class="text-orange text-2xl focus:outline-none">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <div id="dashboardMenu" class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
+                        <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                        <a href="menu.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                            <i class="fas fa-bars"></i> Menu
+                        </a>
+                        <a href="book.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                            <i class="fas fa-calendar-check"></i> Book your table
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <main class="mt-16">
+        <section class="container mx-auto py-16">
+            <h1 class="text-5xl uppercase font-bold text-center text-orange-500 mb-8">Book a Table</h2>
+            <form id="bookingForm" class="bg-gray-500 p-8 rounded-lg shadow-lg max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-lg font-bold mb-2 text-white">Full Name</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 rounded bg-gray-700 text-white" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-lg font-bold mb-2 text-white">Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 rounded bg-gray-700 text-white" required>
+                </div>
+                <div class="mb-4">
+                    <label for="dob" class="block text-lg font-bold mb-2 text-white">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" class="w-full p-2 rounded bg-gray-700 text-white" required>
+                </div>
+                <div class="mb-4">
+                    <label for="date" class="block text-lg font-bold mb-2 text-white">Date</label>
+                    <input type="date" id="date" name="date" required class="w-full px-4 py-2 rounded bg-gray-700 text-white">
+                </div>
+                <div class="mb-4">
+                    <label for="time" class="block text-lg font-bold mb-2 text-white">Time</label>
+                    <input type="time" id="time" name="time" required class="w-full px-4 py-2 rounded bg-gray-700 text-white">
+                </div>
+                <div class="mb-4">
+                    <label for="guests" class="block text-lg font-bold mb-2 text-white">Number of Guests</label>
+                    <input type="number" id="guests" name="guests" min="1" required class="w-full px-4 py-2 rounded bg-gray-700 text-white">
+                </div>
+                <div class="mb-4">
+                    <label for="idProof" class="block text-lg font-bold mb-2 text-white">Upload ID Proof</label>
+                    <input type="file" id="idProof" name="idProof" accept=".jpg,.jpeg,.png,.pdf" class="w-full p-2 rounded bg-gray-700 text-white" required>
+                </div>
+                <button type="submit" class="w-full bg-orange-500 text-black font-bold py-2 rounded hover:bg-orange-600 transition duration-300">
+                    Book Now
+                </button>
+            </form>
+            <p id="errorMessage" class="text-red-500 text-center mt-4 hidden">You must be at least 18 years old to book a table.</p>
+            <p id="successMessage" class="text-green-500 text-center mt-4 hidden">Your booking has been successfully submitted!</p>
+            <p id="tableDetails" class="text-green-500 text-center mt-4 hidden">
+                Your booking is confirmed! You have been assigned to <span id="tableNumber" class="font-bold"></span>.
+            </p>
+            <p id="successMessage" class="text-green-500 text-center mt-4 hidden">Your booking has been successfully submitted!</p>
+<p id="tableDetails" class="text-green-500 text-center mt-4 hidden">
+    Your booking is confirmed! You have been assigned to <span id="tableNumber" class="font-bold"></span>.
+</p>
+<h2 class="text-4xl font-bold text-center text-white mb-8">It will be easier if you book the table using the contact information that is provided at the bottom of the page.</h2>
+   
+        </section>
+    </main>
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <nav class="flex justify-center space-x-8 text-lg font-bold mb-8">
+                <a href="index.html" class="hover:text-orange-500">Home</a>
+                <a href="about.html" class="hover:text-orange-500">About</a>
+                <a href="event.html" class="hover:text-orange-500">Event</a>
+                <a href="https://www.facebook.com/profile.php?id=61567808766807&sk=photos" class="hover:text-orange-500">Gallery</a>
+                <a href="faq.html" class="hover:text-orange-500">FAQs</a>
+            </nav>
+        </div>
+        <div class="container mx-auto px-4 text-center">
+            <img src="gallery/logo.png" alt="Club Logo" class="h-16 mx-auto mb-4">
+            <h3 class="text-xl font-bold">Levels Club</h3>
+            <p class="text-lg flex items-center justify-center">
+                <i class="fas fa-map-marker-alt text-orange-500 mr-2"></i> Centre Point, Lakeside, Pokhara
+            </p>
+        </div>
+        <div class="container mx-auto px-4 text-center mt-8">
+            <h3 class="text-xl font-bold mb-4">Contact Number</h3>
+            <p class="text-lg flex items-center justify-center">
+                <a href="tel:9826105262" class="flex items-center hover:text-orange-500">
+                    <i class="fas fa-phone-alt text-orange-500 mr-2"></i> 9826105262
+                </a>
+            </p>
+        </div>
+        <div class="container mx-auto px-4 text-center mt-8">
+            <h3 class="text-xl font-bold mb-4">Email Us</h3>
+            <p class="text-lg flex items-center justify-center">
+                <a href="mailto:info@levelsclubpokhara.com" class="flex items-center hover:text-orange-500">
+                    <i class="fas fa-envelope text-orange-500 mr-2"></i> info@levelsclubpokhara.com
+                </a>
+            </p>
+        </div>
+    
+        <div class="container mx-auto px-4 text-center mt-8">
+            <h3 class="text-xl font-bold mb-4">Opening Hours</h3>
+            <p class="text-lg flex items-center justify-center">
+                <i class="fas fa-clock text-orange-500 mr-2"></i> 08 PM - 05 AM (Everyday)
+            </p>
+        </div>
+    
+        <div class="container mx-auto px-4 mt-8 flex justify-center space-x-6">
+            <a href="https://www.facebook.com/profile.php?id=61567808766807" class="text-white hover:text-orange-500">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/levelsclubpokhara/" class="text-white hover:text-orange-500">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@levelsclub_pokhara" class="text-white hover:text-orange-500">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+    
+        <div class="container mx-auto px-4 mt-8 text-center text-lg">
+            <p>&copy; 2025 Levels Club Pokhara. All Rights Reserved. <a href="rules.html" class="hover:underline text-orange-500">Rules and Regulations</a></p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+    
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const dob = document.getElementById('dob').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const guests = document.getElementById('guests').value;
+    
+            // Validate fields (you can reuse your existing validation logic here)
+    
+            // Send booking data to the backend
+            fetch('http://localhost:3000/book', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, dob, date, time, guests }),
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        alert('Booking confirmed! A confirmation email and SMS have been sent.');
+                    } else {
+                        alert('Error: Unable to send booking confirmation.');
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('Error: Unable to send booking confirmation.');
+                });
+        });
+    </script>

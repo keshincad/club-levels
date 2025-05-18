@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial scale="1.0">
+        <title>LEVELS CLUB POKHARA</title>
+       
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <link href="https://fonts.cdnfonts.com/css/akira-expanded" rel="stylesheet">
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <header class="bg-black text-white py-4 fixed top-0 w-full z-50">
+            <div class="container  w-screen max-w-none mx-auto flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="gallery/logo.png" alt="Levels Club Pokhara Logo" class="h-12 mr-4">
+                    <h1 class="text-3xl font-bold" style="  font-family: 'Akira Expanded', sans-serif;"><a href="index.html">LEVELS CLUB POKHARA</a></h1>
+                </div>
+                <div class="container  w-screen max-w-none mx-auto px-4 text-center">
+                    <nav class="flex justify-center space-x-8 text-lg font-bold mb-8">
+                        <a href="index.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">Home</a>
+                        <a href="about.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">About</a>
+                        <a href="event.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">Event</a>
+                        <a href="reels.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">Reels</a>
+                        <a href="faq.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">FAQs</a>
+                        <a href="contact.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">Contact</a>
+                    </nav>
+                </div>
+                <div class="relative">
+                    <button id="dashboardButton" class="text-orange text-2xl focus:outline-none">
+                        <i class="bi bi-list" style="color: white; font-weight: bold; font-size: 30px;"></i>
+                    </button>
+                    <div id="dashboardMenu" class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
+                        <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                        <a href="menu.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                            <i class="fas fa-bars"></i> Menu
+                        </a>
+                        <a href="book.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                            <i class="fas fa-calendar-check"></i> Book your table
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="chatbox" onclick="toggleIcons()">
+            <i class="fas fa-comment-dots"></i>
+          </div>
+          
+          
+          <div class="social-icons" id="socialIcons">
+            <a href="https://wa.me/9779826105262" class="whatsapp" target="_blank" title="Chat on WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://m.me/yourpageusername" class="messenger" target="_blank" title="Chat on Messenger">
+              <i class="fab fa-facebook-messenger"></i>
+            </a>
+          </div>
+          
+          <script>
+            function toggleIcons() {
+              const icons = document.getElementById("socialIcons");
+              icons.style.display = icons.style.display === "flex" ? "none" : "flex";
+            }
+          </script>
+
+             
+        <main style="margin-top: 4rem;">
+            <section id="about-us" class="relative text-white py-16" style="background-color: white;">
+                <div class="container  w-screen max-w-none mx-auto text-center">
+                    <h1 class="text-6xl font-bold uppercase tracking-wide text-orange-500 inline-block px-4 py-2" style="  font-family: 'Akira Expanded', sans-serif;">
+                        <span class="bounce text-orange-500 drop-shadow">P</span>
+                        <span class="bounce text-orange-500 drop-shadow">a</span>
+                        <span class="bounce text-orange-500 drop-shadow">s</span>
+                        <span class="bounce text-orange-500 drop-shadow">t</span>
+                        <span class="bounce text-orange-500 drop-shadow">&nbsp;</span>
+                        <span class="bounce text-gray-300 drop-shadow">E</span>
+                        <span class="bounce text-gray-300 drop-shadow">v</span>
+                        <span class="bounce text-gray-300 drop-shadow">e</span>
+                        <span class="bounce text-gray-300 drop-shadow">n</span>
+                        <span class="bounce text-gray-300 drop-shadow">t</span>
+                        <span class="bounce text-orange-500 drop-shadow">&nbsp;</span>
+                        <br><br>
+                        <span class="bounce text-blue-200 drop-shadow">G</span>
+                        <span class="bounce text-blue-200 drop-shadow">l</span>
+                        <span class="bounce text-blue-200 drop-shadow">i</span>
+                        <span class="bounce text-blue-200 drop-shadow">m</span>
+                        <span class="bounce text-blue-200 drop-shadow">p</span>
+                        <span class="bounce text-blue-200 drop-shadow">s</span>
+                        <span class="bounce text-blue-200 drop-shadow">e</span>
+                        <span class="bounce text-blue-200 drop-shadow">s</span><br><br>
+                    </h1>
+                   
+                </div>
+            </section>
+        <main class="py-16">
+            <div class="space-y-12">
+                <div class="flex flex-col md:flex-row items-center mb-12">
+                    <div class=" w-screen max-w-none w-full md:w-1/2 relative">
+                        <img src="gallery/past3.jpg" alt="New Year Celebration 2025" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    </div>
+                    <div class="w-full md:w-1/2 mt-8 md:mt-0 md:ml-8 text-left">
+                        <h3 class="text-3xl font-bold uppercase tracking-wide text-orange-500 shake-text drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">New Year Celebration 2025</h3>
+                        <p class="text-xl text-black mt-4 leading-relaxed drop-shadow">
+                            The New Year Celebration 2025 at Levels Club was a night to remember! With live music, dazzling lights, and an electrifying crowd, the event brought in the new year with style. Guests enjoyed a variety of drinks, a countdown to midnight, and an unforgettable party atmosphere.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center mb-12">
+                    <div class="w-full md:w-1/2 relative">
+                        <img src="gallery/past2.jpg" alt="Ekdev Limbu And The Kallas" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    </div>
+                    <div class="w-full md:w-1/2 mt-8 md:mt-0 md:ml-8 text-left">
+                        <h3 class="text-3xl font-bold uppercase tracking-wide text-orange-500 shake-text drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">Ekdev Limbu And The Kallas</h3>
+                        <p class="text-xl text-black mt-4 leading-relaxed drop-shadow">
+                            Ekdev Limbu and The Kallas rocked the stage at Levels Club with their soulful music and high-energy performance. The crowd was mesmerized by their talent, making it one of the most memorable nights in the club's history.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="w-full md:w-1/2 relative">
+                        <img src="gallery/past1.jpg" alt="Jamesy" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    </div>
+                    <div class="w-full md:w-1/2 mt-8 md:mt-0 md:ml-8 text-left">
+                        <h3 class="text-3xl font-bold uppercase tracking-wide text-orange-500 shake-text drop-shadow"  style="  font-family: 'Akira Expanded', sans-serif;">Jamesy</h3>
+                        <p class="text-xl text-black mt-4 leading-relaxed drop-shadow">
+                            Jamesy brought the house down with an incredible performance that had everyone dancing all night long. The event was a perfect blend of great music, amazing vibes, and an enthusiastic crowd.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="w-full md:w-1/2 relative">
+                        <img src="gallery/trix.jpg" alt="trix" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    </div>
+                    <div class="w-full md:w-1/2 mt-8 md:mt-0 md:ml-8 text-left">
+                        <h3 class="text-3xl font-bold uppercase tracking-wide text-orange-500 shake-text drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">Professor Trix</h3>
+                        <p class="text-xl text-black mt-4 leading-relaxed drop-shadow">
+                    Trix delivered an electrifying performance at Levels Club that left the audience in awe. Known for his dynamic stage presence and powerful lyrics, Trix brought an unmatched energy to the event. The crowd was captivated by his unique style and rhythmic flow, making it a night to remember for all hip-hop enthusiasts in attendance.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="w-full md:w-1/2 relative">
+                        <img src="gallery/jay.jpg" alt="jay author" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    </div>
+                    <div class="w-full md:w-1/2 mt-8 md:mt-0 md:ml-8 text-left">
+                        <h3 class="text-3xl font-bold uppercase tracking-wide text-orange-500 shake-text drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">Jay Author and Brisky</h3>
+                        <p class="text-xl text-black mt-4 leading-relaxed drop-shadow">
+                            Jay Author and Brisky lit up the stage at Levels Club with their incredible performance. The duo captivated the audience with their dynamic energy and chart-topping hits, creating an unforgettable night of music and entertainment.
+                       </p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="w-full md:w-1/2 relative">
+                        <img src="gallery/vyoma.jpg" alt="vyoma" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    </div>
+                    <div class="w-full md:w-1/2 mt-8 md:mt-0 md:ml-8 text-left">
+                        <h3 class="text-3xl font-bold uppercase tracking-wide text-orange-500 shake-text drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">VYOMA</h3>
+                        <p class="text-xl text-black mt-4 leading-relaxed drop-shadow">
+                    Vyoma delivered a mesmerizing performance that captivated the audience at Levels Club. With her soulful voice and enchanting stage presence, she created an atmosphere of pure magic. Her ability to connect with the crowd through her music made the night unforgettable, leaving everyone in awe of her talent and artistry.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="w-full md:w-1/2 relative">
+                        <img src="gallery/dong.jpg" alt="dong" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    </div>
+                    <div class="w-full md:w-1/2 mt-8 md:mt-0 md:ml-8 text-left">
+                        <h3 class="text-3xl font-bold uppercase tracking-wide text-orange-500 shake-text drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">Dong</h3>
+                        <p class="text-xl text-black mt-4 leading-relaxed drop-shadow">
+                    Dong's performance at Levels Club was nothing short of spectacular. With his unique blend of charisma and talent, he captivated the audience from the moment he stepped on stage. His powerful vocals and dynamic stage presence created an electrifying atmosphere that had everyone on their feet. The night was filled with energy, passion, and unforgettable moments, making it a standout event in the club's history.
+                        </p>
+                    </div>
+                </div>
+            </div>
+              <div class="flex flex-col md:flex-row items-center">
+                    <div class="w-full md:w-1/2 relative">
+                        <img src="gallery/chewang1.jpg" alt="dong" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    </div>
+                    <div class="w-full md:w-1/2 mt-8 md:mt-0 md:ml-8 text-left">
+                        <h3 class="text-3xl font-bold uppercase tracking-wide text-orange-500 shake-text drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;"> Chhewang Lama & The Creators</h3>
+                        <p class="text-xl text-black mt-4 leading-relaxed drop-shadow">
+                            Chhewang Lama & The Creators delivered an unforgettable performance at Levels Club on May 9, 2025. Their soulful melodies and electrifying stage presence captivated the audience, creating an atmosphere of pure magic. The band's seamless blend of traditional and modern sounds resonated deeply with the crowd, leaving everyone in awe. It was a night filled with energy, passion, and musical brilliance, making it a standout event in the club's history.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-black text-white py-8">
+            <div class="container mx-auto px-4 text-center">
+                <nav class="flex justify-center space-x-8 text-lg font-bold mb-8">
+                    <a href="index.html" class="hover:text-orange-500 font-bold uppercase text-2xl" style="  font-family: 'Akira Expanded', sans-serif;">Home</a>
+                        <a href="about.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">About</a>
+                        <a href="event.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">Event</a>
+                        <a href="reels.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">Reels</a>
+                        <a href="faq.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">FAQs</a>
+                        <a href="contact.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow" style="  font-family: 'Akira Expanded', sans-serif;">Contact</a>
+                    </nav>
+            </div>
+            <div class="container w-screen max-w-none px-4 text-center">
+                <img src="gallery/logo.png" alt="Club Logo" class="h-16 mx-auto mb-4">
+                <h3 class="text-xl font-bold drop-shadow montserrat-bold">Levels Club</h3>
+                <p class="text-lg flex items-center justify-center">
+                    <i class="fas fa-map-marker-alt text-orange-500 mr-2 drop-shadow"></i> Centre Point, Lakeside, Pokhara
+                </p>
+            </div>
+            <div class="container mx-auto px-4 text-center mt-8">
+                <h3 class="text-xl font-bold mb-4 drop-shadow">Contact Number</h3>
+                <p class="text-lg flex items-center justify-center">
+                    <a href="tel:9826105262" class="flex items-center hover:text-orange-500">
+                        <i class="fas fa-phone-alt text-orange-500 mr-2 drop-shadow"></i> 9826105262
+                    </a>
+                </p>
+            </div>
+            <div class="container mx-auto px-4 text-center mt-8">
+                <h3 class="text-xl font-bold mb-4 drop-shadow">Email Us</h3>
+                <p class="text-lg flex items-center justify-center">
+                    <a href="mailto:info@levelsclubpokhara.com" class="flex items-center hover:text-orange-500">
+                        <i class="fas fa-envelope text-orange-500 mr-2" drop-shadow></i> info@levelsclubpokhara.com
+                    </a>
+                </p>
+            </div>
+        
+            <div class="container mx-auto px-4 text-center mt-8">
+                <h3 class="text-xl font-bold mb-4" drop-shadow>Opening Hours</h3>
+                <p class="text-lg flex items-center justify-center">
+                    <i class="fas fa-clock text-orange-500 mr-2" drop-shadow></i> 08 PM - 05 AM (Everyday)
+                </p>
+            </div>
+        
+            <div class="container mx-auto px-4 mt-8 flex justify-center space-x-6">
+                <a href="https://www.facebook.com/profile.php?id=61567808766807" class="text-white hover:text-orange-500">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/levelsclubpokhara/" class="text-white hover:text-orange-500">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@levelsclub_pokhara" class="text-white hover:text-orange-500">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        
+            <div class="container mx-auto px-4 mt-8 text-center text-lg drop-shadow">
+                <p>&copy; 2025 Levels Club Pokhara. All Rights Reserved. <a href="rules.html" class="hover:text-orange-500 drop-shadow">Rules and Regulations </a>|<a href="terms.html" class="hover:text-orange-500 drop-shadow">Terms & Conditions</a> | <a href="privacy.html" class="hover:text-orange-500 drop-shadow">Privacy Policy</a>
+                </div>
+        </footer>
+        
+        <script>
+
+      
+            const dashboardButton = document.getElementById('dashboardButton');
+            const dashboardMenu = document.getElementById('dashboardMenu');
+
+            dashboardButton.addEventListener('click', () => {
+                dashboardMenu.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!dashboardButton.contains(event.target) && !dashboardMenu.contains(event.target)) {
+                    dashboardMenu.classList.add('hidden');
+                }
+            });
+            </script>
+            <style>
+                .shake-text {
+        font-size: 36px;
+        display: inline-block;
+        animation: shake 0.6s infinite; /* Ensure infinite repetition */
+    }
+  
+      @keyframes shake {
+        0%   { transform: translateX(0); }
+        10%  { transform: translateX(-5px); }
+        20%  { transform: translateX(5px); }
+        30%  { transform: translateX(-5px); }
+        40%  { transform: translateX(5px); }
+        50%  { transform: translateX(-5px); }
+        60%  { transform: translateX(5px); }
+        70%  { transform: translateX(-5px); }
+        80%  { transform: translateX(5px); }
+        90%  { transform: translateX(-5px); }
+        100% { transform: translateX(0); }
+      }
+      .drop-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adds a subtle shadow */
+    }
+                 @keyframes bounce-in {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+        50% {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+        @font-face {
+    font-family: 'Nexa Bold';
+    src: url('fonts/nexa-bold.woff2') format('woff2'),
+         url('fonts/nexa-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+p {
+    font-family: 'Nexa Bold', sans-serif;
+    font-size: 1rem; /* Adjust size as needed */
+    color: #ffffff; /* Optional: Set text color */
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold weight */
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: #ffffff; /* Optional: Set text color */
+}
+.montserrat-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+    
+                 .bounce {
+        display: inline-block;
+        animation: bounce-in 0.6s infinite ease forwards;
+        opacity: 10; 
+    }
+    .bounce {
+        display: inline-block;
+        animation: bounce-in 0.6s infinite ease forwards;
+        opacity: 10; 
+    }
+    
+    .bounce:nth-child(1) {
+        animation-delay: 0.1s;
+        animation-duration: 1.9s;
+    }
+    
+    .bounce:nth-child(2) {
+        animation-delay: 0.2s;
+        animation-duration: 1.9s;
+    }
+    
+    .bounce:nth-child(3) {
+        animation-delay: 0.3s;
+        animation-duration: 1.9s;
+    }
+    
+    .bounce:nth-child(4) {
+        animation-delay: 0.4s;
+        animation-duration: 1.9s;
+    }
+    
+    .bounce:nth-child(5) {
+        animation-delay: 0.5s;
+        animation-duration: 1.9s;
+    }
+    
+    .bounce:nth-child(6) {
+        animation-delay: 0.6s;
+        animation-duration: 1.9s;
+    }
+    
+    .bounce:nth-child(7) {
+        animation-delay: 0.7s;
+        animation-duration: 1.9s;
+    }
+    
+    .bounce:nth-child(8) {
+        animation-delay: 0.8s;
+        animation-duration: 1.9s;
+    }
+    
+    .bounce:nth-child(9) {
+        animation-delay: 0.9s;
+        animation-duration: 1.9s;
+    }
+    
+    .bounce:nth-child(10) {
+        animation-delay: 1s;
+        animation-duration: 1.9s;
+    }
+    
+    .bounce:nth-child(11) {
+        animation-delay: 1.1s;
+        animation-duration: 1.9s;
+    }
+    
+    .bounce:nth-child(12) {
+        animation-delay: 1.2s;
+        animation-duration: 1.9s;
+    }
+    
+    .bounce:nth-child(13) {
+        animation-delay: 1.3s;
+        animation-duration: 1.9s;
+    }
+    
+    .bounce:nth-child(14) {
+        animation-delay: 1.4s;
+        animation-duration: 1.9s;
+    }
+    
+    .bounce:nth-child(15) {
+        animation-delay: 1.5s;
+        animation-duration: 1.9s;
+    }
+    .bounce:nth-child(16)
+    {
+        animation-delay: 1.6s;
+        animation-duration: 1.9s;
+    }        
+    .bounce:nth-child(17)
+    {
+        animation-delay: 1.7s;
+        animation-duration: 1.9s;
+    }   
+    .bounce:nth-child(18)
+    {
+        animation-delay: 1.8s;
+        animation-duration: 1.9s;
+    }   
+    .bounce:nth-child(19)
+    {
+        animation-delay: 1.9s;
+        animation-duration: 1.9s;
+    }   
+    .chatbox {
+        position: fixed !important;
+        bottom: 30px !important;
+        right: 30px !important;
+        background: #0077cc;
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 24px;
+        z-index: 9999;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+  
+      .social-icons {
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        z-index: 9999;
+      }
+  
+      .social-icons a {
+        text-decoration: none;
+        border-radius: 50%;
+        padding: 14px;
+        font-size: 24px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+  
+      .social-icons a.whatsapp {
+        background-color: #25d366;
+      }
+  
+      .social-icons a.messenger {
+        background-color: #0084ff;
+      }
+          @font-face {
+    font-family: 'Nexa Bold';
+    src: url('fonts/nexa-bold.woff2') format('woff2'),
+         url('fonts/nexa-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+p {
+    font-family: 'Nexa Bold', sans-serif;
+    font-size: 1rem; /* Adjust size as needed */
+    color: #ffffff; /* Optional: Set text color */
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold weight */
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: #ffffff; /* Optional: Set text color */
+}
+.montserrat-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+    
+            </style>
+</body>
+</html>    

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy | Levels Club Pokhara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #111;
+      color: #eee;
+    }
+    .chatbox {
+        position: fixed !important;
+        bottom: 30px !important;
+        right: 30px !important;
+        background: #0077cc;
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 24px;
+        z-index: 9999;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+  
+      .social-icons {
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        z-index: 9999;
+      }
+  
+      .social-icons a {
+        text-decoration: none;
+        border-radius: 50%;
+        padding: 14px;
+        font-size: 24px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+  
+      .social-icons a.whatsapp {
+        background-color: #25d366;
+      }
+  
+      .social-icons a.messenger {
+        background-color: #0084ff;
+      }
+    
+
+    header {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1, h2 {
+      color: #fff;
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      color: #999;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    a {
+      color: #aaa;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class=" text-white py-4 fixed top-0 w-full z-50">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="gallery/logo.png" alt="Levels Club Pokhara Logo" class="h-12 mr-4">
+            <h1 class="text-3xl font-bold"><a href="index.html">LEVELS CLUB POKHARA</a></h1>
+        </div>
+        <div class="container mx-auto px-4 text-center">
+            <nav class="flex justify-center space-x-8 text-lg font-bold mb-8">
+                <a href="index.html" class="hover:text-orange-500 text-2xl font-bold uppercase text-white">Home</a>
+                <a href="about.html" class="hover:text-orange-500 text-2xl font-bold uppercase text-white">About</a>
+                <a href="faq.html" class="hover:text-orange-500 text-2xl font-bold uppercase text-white">FAQs</a>
+                <a href="contact.html" class="hover:text-orange-500 text-2xl font-bold uppercase text-white">Contact</a>
+            </nav>
+        </div>
+        <div class="relative">
+            <button id="dashboardButton" class="text-orange text-2xl focus:outline-none">
+                <i class="bi bi-list" style="color: white; font-weight: bold; font-size: 30px;"></i>
+            </button>
+            <div id="dashboardMenu" class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
+                <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="menu.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    <i class="fas fa-bars"></i> Menu
+                </a>
+                <a href="book.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    <i class="fas fa-calendar-check"></i> Book your table
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="chatbox" onclick="toggleIcons()">
+    <i class="fas fa-comment-dots"></i>
+  </div>
+  
+  
+  <div class="social-icons" id="socialIcons">
+    <a href="https://wa.me/977982853733" class="whatsapp" target="_blank" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://m.me/yourpageusername" class="messenger" target="_blank" title="Chat on Messenger">
+      <i class="fab fa-facebook-messenger"></i>
+    </a>
+  </div>
+  
+  <script>
+    function toggleIcons() {
+      const icons = document.getElementById("socialIcons");
+      icons.style.display = icons.style.display === "flex" ? "none" : "flex";
+    }
+  </script>
+
+
+  <main>
+    <h2 class="text-3xl text-center font-bold">Privacy Policy</h2><br><br>
+    <p class="text-2xl">This Privacy Policy describes how Levels Club Pokhara (“we”, “our”, or “us”) collects, uses, and protects your personal information when you interact with our website, social media, and services.</p>
+    <br><br>
+    <h2 class="text-2xl">1. Information We Collect</h2>
+    <ul>
+      <li class="text-2xl"><strong>Personal Information:</strong> Name, email address, phone number, and date of birth when making reservations or signing up for newsletters.</li>
+      <li class="text-2xl"><strong>Event Photos & Videos:</strong> Images or videos taken at our events may be used for promotional purposes.</li>
+      <li class="text-2xl"><strong>Technical Information:</strong> IP address, browser type, device info, and website usage via cookies and analytics tools.</li>
+    </ul>
+    <br><br>
+    <h2 class="text-2xl">2. How We Use Your Information</h2>
+    <ul>
+      <li class="text-2xl">To manage bookings and guestlists</li>
+      <li class="text-2xl">To send event updates or promotional content</li>
+      <li class="text-2xl">To send event updates or promotional content</li>
+      <li class="text-2xl" >To improve our website experience and marketing</li>
+    </ul>
+    <br><br>
+    <h2 class="text-2xl">3. Cookies</h2>
+    <p class="text-2xl">Our website uses cookies to enhance your browsing experience. You may disable cookies through your browser settings if desired.</p>
+    <br><br>
+    <h2 class="text-2xl">4. Sharing of Information</h2>
+    <p class="text-2xl">We do not sell your personal data. We may share it with trusted third-party services only to operate our website and deliver services (e.g., newsletter software).</p>
+    <br><br>
+    <h2 class="text-2xl">5. Security</h2>
+    <p class="text-2xl">We implement security measures to protect your data. However, no method is 100% secure, and we cannot guarantee absolute protection.</p>
+    <br><br>
+    <h2 class="text-2xl">6. Your Rights</h2>
+    <ul>
+      <li class="text-2xl">You have the right to access, update, or request deletion of your data.</li>
+      <li class="text-2xl">You may opt-out of promotional emails at any time by clicking “unsubscribe”.</li>
+    </ul>
+    <br><br>
+    <h2 class="text-2xl">7. External Links</h2>
+    <p class="text-2xl">Our website may contain links to third-party sites. We are not responsible for their privacy practices.</p>
+    <br><br>
+    <h2 class="text-2xl">8. Updates to This Policy</h2>
+    <p class="text-2xl">We may update this Privacy Policy from time to time. Changes will be posted on this page with the revised date.</p>
+    <br><br>
+    <h2 class="text-2xl">9. Contact Us</h2>
+    <p class="text-2xl">If you have questions about this Privacy Policy or your data, please contact us at <a href="mailto:info@levelsclubpokhara.com" class="hover:text-orange-500">info@levelsclubpokhara.com</a>.</p>
+    <br><br>
+  </main>
+  <footer>
+    
+    <div class="container mx-auto px-4 mt-8 text-center text-xl">
+        <p>&copy; 2025 Levels Club Pokhara. All Rights Reserved. <a href="rules.html" class="hover:text-orange-500">Rules and Regulations </a>|<a href="terms.html" class="hover:text-orange-500">Terms & Conditions</a> | <a href="privacy.html" class="hover:text-orange-500">Privacy Policy</a>
+    </div>
+</footer>
+<script>
+  const dashboardButton = document.getElementById('dashboardButton');
+  const dashboardMenu = document.getElementById('dashboardMenu');
+  
+  
+  dashboardButton.addEventListener('click', () => {
+      dashboardMenu.classList.toggle('hidden');
+  });
+  
+  document.addEventListener('click', (event) => {
+      if (!dashboardButton.contains(event.target) && !dashboardMenu.contains(event.target)) {
+          dashboardMenu.classList.add('hidden');
+      }
+  });
+  </script>
+
+</body>
+</html>
