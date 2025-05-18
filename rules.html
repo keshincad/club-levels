@@ -14,37 +14,42 @@
 
 </head>
 <body class="bg-black text-white">
-    <header class="bg-black text-white py-4 fixed top-0 w-full z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="gallery/logo.png" alt="Levels Club Pokhara Logo" class="h-12 mr-4">
-                <h1 class="text-3xl font-bold"><a href="index.html">LEVELS CLUB POKHARA</a></h1>
-            </div> <div class="container mx-auto px-4 text-center">
-                <nav class="flex justify-center space-x-8 text-lg font-bold mb-8">
-                    <a href="index.html" class="hover:text-orange-500">Home</a>
-                    <a href="about.html" class="hover:text-orange-500">About</a>
-                    <a href="faq.html" class="hover:text-orange-500">FAQs</a>
-                    <a href="contact.html" class="hover:text-orange-500">Contact</a>
-                </nav>
-            </div>
-            <div class="relative">
-                <button id="dashboardButton" class="text-orange text-2xl focus:outline-none">
-                    <i class="fas fa-th"></i>
-                </button>
-                <div id="dashboardMenu" class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
-                    <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                        <i class="fas fa-home"></i> Home
-                    </a>
-                    <a href="menu.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                        <i class="fas fa-bars"></i> Menu
-                    </a>
-                    <a href="book.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                        <i class="fas fa-calendar-check"></i> Book your table
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
+   <header id="mainHeader" style="backdrop-filter: blur(12px); background: rgba(24,24,27,0.7); transition: top 0.4s;">
+  <div class="container mx-auto px-4 flex flex-col items-center py-4">
+    <div class="flex items-center justify-center mb-4 space-x-4">
+      <img src="gallery/logo.png" alt="Levels Club Pokhara Logo" class="h-16">
+      <h1 class="text-3xl font-bold drop-shadow text-center" style="font-family: 'Akira Expanded', sans-serif;">
+        <a href="index.html">LEVELS CLUB POKHARA</a>
+      </h1>
+    </div>
+    <nav class="flex justify-center space-x-8 text-lg font-bold mb-0">
+      <a href="index.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow">Home</a>
+      <a href="faq.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow">FAQs</a>
+      <a href="contact.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow">Contact</a>
+    </nav>
+  </div>
+</header>
+<script>
+let lastScrollY = window.scrollY;
+const header = document.getElementById('mainHeader');
+header.style.position = "fixed";
+header.style.width = "100%";
+header.style.top = "0";
+header.style.zIndex = "50";
+header.style.transition = "top 0.4s cubic-bezier(0.4,0,0.2,1)";
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY === 0) {
+    header.style.top = "0";
+  } else if (window.scrollY > lastScrollY) {
+   header.style.top = `-${header.offsetHeight}px`;
+  } else {
+   
+    header.style.top = "0";
+  }
+  lastScrollY = window.scrollY;
+});
+</script>
 
     <main class="container mx-auto mt-20 p-4" style="background-image: url(gallery/back.jpg);">
         <h1 class="text-3xl font-bold text-center mb-8">Rules and Regulations</h1>
@@ -57,7 +62,6 @@
             <div class="container mx-auto px-4 text-center">
                 <nav class="flex justify-center space-x-8 text-lg font-bold mb-8">
                     <a href="index.html" class="hover:text-orange-500">Home</a>
-                    <a href="about.html" class="hover:text-orange-500">About</a>
                     <a href="faq.html" class="hover:text-orange-500">FAQs</a>
                     <a href="contact.html" class="hover:text-orange-500">Contact</a>
                 </nav>
@@ -109,21 +113,6 @@
                 <p>&copy; 2025 Levels Club Pokhara. All Rights Reserved. <a href="rules.html" class="hover:underline text-orange-500">Rules and Regulations</a></p>
             </div>
         </footer>
-        <script>
-      
-            const dashboardButton = document.getElementById('dashboardButton');
-            const dashboardMenu = document.getElementById('dashboardMenu');
-
-            dashboardButton.addEventListener('click', () => {
-                dashboardMenu.classList.toggle('hidden');
-            });
-
-            document.addEventListener('click', (event) => {
-                if (!dashboardButton.contains(event.target) && !dashboardMenu.contains(event.target)) {
-                    dashboardMenu.classList.add('hidden');
-                }
-            });
-            </script>
             <style>
               
             </style>
