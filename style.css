@@ -24,7 +24,7 @@ html,body {
 }
 h1, h2 {
     font-family: 'Akira Expanded', sans-serif;
-    font-weight: bold; /* Ensure bold weight */
+    font-weight: bold;
 }
 
 header {
@@ -34,7 +34,7 @@ header {
     width: 100%;
     z-index: 1000;
   }
-/* Hide header by moving it up, show by resetting */
+
 #mainHeader {
   transition: top 0.3s;
   position: fixed;
@@ -44,10 +44,10 @@ header {
   z-index: 1000;
 }
 #mainHeader.header-hidden {
-  top: -120px; /* Adjust based on your header height */
-}
+  top: -120px; 
 body {
-  padding-top: 80px; /* Adjust to your header height so content is not hidden */
+  padding-top: 80px;
+}
 }
 section {
     position: relative;
@@ -61,11 +61,11 @@ section {
 }
 
 .video-container1 .video-small {
-    width: 80%; /* Adjust the width as needed */
-    max-width: 600px; /* Set a maximum width */
-    height: 50%; /* Maintain aspect ratio */
-    border-radius: 12px; /* Optional: Add rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Add shadow */
+    width: 80%;
+    max-width: 600px; 
+    height: 50%; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .upcoming-events-swiper {
@@ -1148,4 +1148,41 @@ h3 {
 .slide1-desc h3 {
   font-size: 1.1rem;
   margin-bottom: 0.3rem;
+}
+.book-table-float {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 100;
+  background: rgba(255, 115, 0, 0.95);
+  color: #fff;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.book-table-float:hover {
+  background: #ff7300;
+}
+.book-table-float i {
+  font-size: 2rem;
+}
+.book-table-float span {
+  display: none;
+}
+@media (max-width: 640px) {
+  .book-table-float {
+    width: 48px;
+    height: 48px;
+    bottom: 16px;
+    right: 16px;
+  }
+  .book-table-float i {
+    font-size: 1.5rem;
+  }
 }
