@@ -5,53 +5,60 @@
         <meta name="viewport" content="width=device-width", initial scale="1.0">
         <title>FAQs</title>
         <script src="https://cdn.tailwindcss.com"></script>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/akira-expanded" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
     </head>
     <body>
-        <header class="bg-black text-white py-4 fixed top-0 w-full z-50">
-            <div class="container mx-auto flex justify-between items-center">
-                <div class="flex items-center">
-                    <img src="gallery/logo.png" alt="Levels Club Pokhara Logo" class="h-12 mr-4">
-                    <h1 class="text-3xl font-bold"><a href="index.html">LEVELS CLUB POKHARA</a></h1>
-                </div>
-                <div class="container mx-auto px-4 text-center">
-                    <nav class="flex justify-center space-x-8 text-lg font-bold mb-8">
-                        <a href="index.html" class="hover:text-orange-500">Home</a>
-                        <a href="about.html" class="hover:text-orange-500">About</a>
-                        <a href="event.html" class="hover:text-orange-500">Event</a>
-                        <a href="reels.html" class="hover:text-orange-500">Reels</a>
-                        <a href="faq.html" class="hover:text-orange-500">FAQs</a>
-                        <a href="contact.html" class="hover:text-orange-500">Contact</a>
-                    </nav>
-                </div>
-                <div class="relative">
-                    <button id="dashboardButton" class="text-orange text-2xl focus:outline-none">
-                        <i class="fas fa-th"></i>
-                    </button>
-                    <div id="dashboardMenu" class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
-                        <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                            <i class="fas fa-home"></i> Home
-                        </a>
-                        <a href="menu.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                            <i class="fas fa-bars"></i> Menu
-                        </a>
-                        <a href="book.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                            <i class="fas fa-calendar-check"></i> Book your table
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </header>
+         
+ <header id="mainHeader" style="backdrop-filter: blur(12px); background: rgba(24,24,27,0.7); transition: top 0.4s;">
+  <div class="container mx-auto px-4 flex flex-col items-center py-4">
+    <div class="flex items-center justify-center mb-4 space-x-4">
+      <img src="gallery/logo.png" alt="Levels Club Pokhara Logo" class="h-16">
+      <h1 class="text-3xl font-bold drop-shadow text-center text-white" style="font-family: 'Akira Expanded', sans-serif;">
+        <a href="index.html">LEVELS CLUB POKHARA</a>
+      </h1>
+    </div>
+    <nav class="flex justify-center space-x-8 text-lg font-bold mb-0">
+      <a href="index.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow text-white">Home</a>
+      <a href="faq.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow text-white">FAQs</a>
+      <a href="contact.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow text-white">Contact</a>
+    </nav>
+  </div>
+</header>
+<script>
+let lastScrollY = window.scrollY;
+const header = document.getElementById('mainHeader');
+header.style.position = "fixed";
+header.style.width = "100%";
+header.style.top = "0";
+header.style.zIndex = "50";
+header.style.transition = "top 0.4s cubic-bezier(0.4,0,0.2,1)";
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY === 0) {
+    header.style.top = "0";
+  } else if (window.scrollY > lastScrollY) {
+   header.style.top = `-${header.offsetHeight}px`;
+  } else {
+   
+    header.style.top = "0";
+  }
+  lastScrollY = window.scrollY;
+});
+</script>
                     
         <main style="margin-top: 4rem;">
             <section id="faq" class="relative text-white py-16" style="background-color: black;">
                 <div class="container mx-auto text-center">
-                    <h1 class="text-6xl font-bold uppercase tracking-wide text-orange-500 inline-block px-4 py-2">
+                    <h1 class="text-6xl font-bold uppercase tracking-wide text-orange-500 inline-block px-4 py-2 drop-shadow" style="font-family: 'Akira Expanded', sans-serif;">
                        Frequently Asked Questions
                     </h1>
                 </div>
@@ -59,121 +66,121 @@
             <section id="faq-section" class="min-h-screen bg-gray-900 flex flex-col items-center justify-center py-16">
                 <div class="space-y-6 w-full max-w-4xl">
                
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Is there an entry fee or cover charge?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;;">Is there an entry fee or cover charge?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                             Yes, there is usually a small cover charge, especially on weekends or during special events. It helps us support our DJs and performers. Prices may vary depending on the night—feel free to call or check our social media for details.
                         </p>
                     </div>
             
              
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Do you allow walk-ins or is it reservation only?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">Do you allow walk-ins or is it reservation only?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                             We welcome walk-ins, but on busy nights (especially Fridays and Saturdays), we recommend making a reservation to ensure you get a good spot—especially for VIP or lounge areas.
                         </p>
                     </div>
             
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Is the club open every day or only on weekends?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">Is the club open every day or only on weekends?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                             Yes, we’re open every night, but weekends tend to be the most lively with featured DJs, themed parties, and packed dance floors.
                         </p>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">What's the age requirement to enter?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">What's the age requirement to enter?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                             You must be 18 years or older to enter.Our staff at the entrance may ask for your valid identification before letting you enter the club.                          </p>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Do you serve food as well or just drinks?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">Do you serve food as well or just drinks?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                             We serve a variety of snacks and bar bites, including both local and international favorites-perfect to fuel your night out. Enjoy our delicious menu alongside your favorite beverages.
                         </p>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Is there a bar menu or cocktail list I can see?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">Is there a bar menu or cocktail list I can see?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                         Yes,Our menu is available both physically and online.You can scan a QR code at your table or ask your bartender or waiter for recommendations.
                         </p>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Do you have any vegeterian or vegan snacks?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">Do you have any vegeterian or vegan snacks?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                         Yes, We offer vegeterian and vegan-friendly options such as spring rolls, spicy peanuts, fries, momo (dumplings) with plant based fillings as well as popcorn.                        
                         </p>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">What kind of music do you play?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">What kind of music do you play?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                         We play a mix of EDM, techno, Afrobeat, commercial hits ,reggaetonn and some local Nepali fusion beats.The vibe depends on the night and the DJ!
                         </p>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Is there a dance floor?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">Is there a dance floor?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                         Of course! We have a dedicated dance floor, and it's usually packed with energy, especially after 11PM.
                         </p>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Are there any special theme nights or events coming up?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">Are there any special theme nights or events coming up?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                         Yes! We host theme parties, DJ nights, ladies nights, and holiday events.Follow us on instagram or Facebook to stay updated or You can even check at the Upcoming Events section of our website.You can easily find our facebook and instagram link at he bottom of the page.
                         </p>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Can I take photod or videos?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">Can I take photod or videos?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                         Yes, feel free to take photos or videos-but please be mindful of pther guest's privacy.We also have photographers on site.
                         </p>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Is there a dress code?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">Is there a dress code?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                         We're chil, but we love a stylish crowd! Avoid flip-flops.Smart casual or trendy attire is recommended.
                         </p>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">DO you have VIP or Lounge area?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">DO you have VIP or Lounge area?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                         Yes, We offer VIp seating and private lounges for small groups and celebrations.You can book in advance for bottle service and a more exclusive experience.
                         </p>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Do you host private parties or events?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">Do you host private parties or events?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                             Definetly! Whether it's a birthday, bachelor/bachelorette, or corporate party, we can help you organize a memorable night.Contact us for packages.You can look at the bottom of the page for our contact information.
                         </p>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Is smoking allowed inside or is there a smoking area?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">Is smoking allowed inside or is there a smoking area?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                             Smoking inside the club is allowed but no drinking or smoking activity is allowed on the dance floor.
                         </p>
                     </div>
-                        <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Do you offer parking or valet service?</h2>
-                        <p class="mt-2 text-center">
+                        <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">Do you offer parking or valet service?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                             We have limited parking available. On busy nights, we recommend arriving early or using a taxi. Valet service is not available at the moment.
                         </p>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Is the place safe for solo travelers, especially women?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">Is the place safe for solo travelers, especially women?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;" >
                             Yes, we prioritize safety for all our guests.Our security staff is always present, and our team is trained to handle any issues respectfully.
                         </p>
                     </div>
             
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Do you provide taxi ir ride service assistance after closing?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">Do you provide taxi ir ride service assistance after closing?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                             Yes,we can help youi book a reliable taxi when you're ready to head out. Just ask at the front desk or speak to any staff member.
                         </p>
                     </div>
             
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Do you have security or bouncers on-site?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">Do you have security or bouncers on-site?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                             Yes, for your safety and comfort, we have trained security personnel at the entrance and inside the venue at all times.
 
 
@@ -181,9 +188,9 @@
                     </div>
             
             
-                    <div class="bg-gray-100 p-4 rounded-lg shadow">
-                        <h2 class="text-2xl font-bold text-center">Where are you located?</h2>
-                        <p class="mt-2 text-center">
+                    <div class="bg-gray-500 p-4 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold text-center drop-shadow text-blue-950" style="font-family: 'Montserrat', sans-serif;">Where are you located?</h2>
+                        <p class="mt-2 text-center drop-shadow" style="color: whitesmoke;">
                             We are located at Centre Point, Lakeside Pokhara.
                             <div class="map mt-4 flex justify-center">
                                 <iframe 
@@ -202,59 +209,57 @@
             </section>
             <footer class="bg-black text-white py-8">
                 <div class="container mx-auto px-4 text-center">
-                    <nav class="flex justify-center space-x-8 text-lg font-bold mb-8">
-                        <a href="index.html" class="hover:text-orange-500">Home</a>
-                        <a href="about.html" class="hover:text-orange-500">About</a>
-                        <a href="event.html" class="hover:text-orange-500">Event</a>
-                        <a href="https://www.facebook.com/profile.php?id=61567808766807&sk=photos" class="hover:text-orange-500">Gallery</a>
-                        <a href="faq.html" class="hover:text-orange-500">FAQs</a>
-                    </nav>
+                  <nav class="flex justify-center space-x-8 text-lg font-bold mb-0">
+      <a href="index.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow">Home</a>
+      <a href="faq.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow">FAQs</a>
+      <a href="contact.html" class="hover:text-orange-500 font-bold uppercase text-2xl drop-shadow">Contact</a>
+    </nav>
                 </div>
                 <div class="container mx-auto px-4 text-center">
-                    <img src="gallery/logo.png" alt="Club Logo" class="h-16 mx-auto mb-4">
-                    <h3 class="text-xl font-bold">Levels Club</h3>
-                    <p class="text-lg flex items-center justify-center">
+                    <img src="gallery/logo.png" alt="Club Logo" class="h-16 mx-auto mb-4 drop-shadow">
+                    <h3 class="text-xl font-bold drop-shadow" style="font-family: 'Montserrat', sans-serif;">Levels Club</h3>
+                    <p class="text-lg flex items-center justify-center drop-shadow">
                         <i class="fas fa-map-marker-alt text-orange-500 mr-2"></i> Centre Point, Lakeside, Pokhara
                     </p>
                 </div>
                 <div class="container mx-auto px-4 text-center mt-8">
-                    <h3 class="text-xl font-bold mb-4">Contact Number</h3>
-                    <p class="text-lg flex items-center justify-center">
-                        <a href="tel:9826105262" class="flex items-center hover:text-orange-500">
-                            <i class="fas fa-phone-alt text-orange-500 mr-2"></i> 9826105262
+                    <h3 class="text-xl font-bold mb-4 drop-shadow" style="font-family: 'Montserrat', sans-serif;">Contact Number</h3>
+                    <p class="text-lg flex items-center justify-center drop-shadow">
+                        <a href="tel:9802853733" class="flex items-center hover:text-orange-500 drop-shadow">
+                            <i class="fas fa-phone-alt text-orange-500 mr-2"></i> 9802853733
                         </a>
                     </p>
                 </div>
                 <div class="container mx-auto px-4 text-center mt-8">
-                    <h3 class="text-xl font-bold mb-4">Email Us</h3>
+                    <h3 class="text-xl font-bold mb-4 drop-shadow" style="font-family: 'Montserrat', sans-serif;">Email Us</h3>
                     <p class="text-lg flex items-center justify-center">
-                        <a href="mailto:info@levelsclubpokhara.com" class="flex items-center hover:text-orange-500">
-                            <i class="fas fa-envelope text-orange-500 mr-2"></i> info@levelsclubpokhara.com
+                        <a href="mailto:levelsclubpokhara@gmail.com" class="flex items-center hover:text-orange-500 drop-shadow">
+                            <i class="fas fa-envelope text-orange-500 mr-2"></i> levelsclubpokhara@gmail.com
                         </a>
                     </p>
                 </div>
             
                 <div class="container mx-auto px-4 text-center mt-8">
-                    <h3 class="text-xl font-bold mb-4">Opening Hours</h3>
-                    <p class="text-lg flex items-center justify-center">
+                    <h3 class="text-xl font-bold mb-4 drop-shadow" style="font-family: 'Montserrat', sans-serif;">Opening Hours</h3>
+                    <p class="text-lg flex items-center justify-center drop-shadow">
                         <i class="fas fa-clock text-orange-500 mr-2"></i> 08 PM - 05 AM (Everyday)
                     </p>
                 </div>
             
                 <div class="container mx-auto px-4 mt-8 flex justify-center space-x-6">
-                    <a href="https://www.facebook.com/profile.php?id=61567808766807" class="text-white hover:text-orange-500">
+                    <a href="https://www.facebook.com/profile.php?id=61567808766807" class="text-white hover:text-orange-500 drop-shadow text-3xl">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.instagram.com/levelsclubpokhara/" class="text-white hover:text-orange-500">
+                    <a href="https://www.instagram.com/levelsclubpokhara/" class="text-white hover:text-orange-500 drop-shadow text-3xl">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.tiktok.com/@levelsclub_pokhara" class="text-white hover:text-orange-500">
+                    <a href="https://www.tiktok.com/@levelsclub_pokhara" class="text-white hover:text-orange-500 drop-shadow text-3xl">
                         <i class="fab fa-tiktok"></i>
                     </a>
                 </div>
             
                 <div class="container mx-auto px-4 mt-8 text-center text-lg">
-                    <p>&copy; 2025 Levels Club Pokhara. All Rights Reserved. <a href="rules.html" class="hover:text-orange-500">Rules and Regulations </a>|<a href="terms.html" class="hover:text-orange-500">Terms & Conditions</a> | <a href="privacy.html" class="hover:text-orange-500">Privacy Policy</a>
+                    <p class="nexa-bold drop-shadow">&copy; 2025 Levels Club Pokhara. All Rights Reserved. <a href="rules.html" class="hover:text-orange-500">Rules and Regulations </a>|<a href="terms.html" class="hover:text-orange-500">Terms & Conditions</a> | <a href="privacy.html" class="hover:text-orange-500">Privacy Policy</a>
                     </div>
             </footer>
             
@@ -275,5 +280,34 @@
       }
   });
   </script>
+  <style>
+        @font-face {
+    font-family: 'Nexa Bold';
+    src: url('fonts/nexa-bold.woff2') format('woff2'),
+         url('fonts/nexa-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+p {
+    font-family: 'Nexa Bold', sans-serif;
+    font-size: 1rem; /* Adjust size as needed */
+    color: #ffffff; /* Optional: Set text color */
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold weight */
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: #ffffff; /* Optional: Set text color */
+}
+.montserrat-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+ .drop-shadow {
+        text-shadow: 2px 2px 4px rgba(255, 0, 212, 0.8); /* Adds a subtle shadow */
+    }
+  </style>
     </body>
 </html>
